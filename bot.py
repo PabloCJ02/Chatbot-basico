@@ -47,10 +47,21 @@ elif option == 3:
   for dia, horario in horario.items():    
         print(f'{dia} - {horario}')
         
-while option<0 or option>3:
+while option<1 or option>3:
     print("No elegiste una opción válida, vuelve a elegirlo.")
     option = int(input())
 
-
-print("Deseas elegir otra opción?")
-option = int(input())
+while option>1 or option<3:
+  print("Deseas elegir otra opción?")
+  option = int(input())
+  if option == 1:
+    mostrar_mensaje(menu)
+  elif option == 2:
+    mostrar_mensaje(promociones)
+  elif option == 3:
+    for dia, hora in horario.items():
+        print(f"{dia} - {hora}")
+        
+  while option<1 or option>3:
+    print("No elegiste una opción válida, vuelve a elegirlo.")
+    option = int(input())      
